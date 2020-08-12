@@ -1,0 +1,21 @@
+{
+  "name": "stress",
+  "version": "1.0.0",
+  "description": "Maxonrow network stress",
+  "main": "./dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "npm run build && node dist/index.js",
+    "build": "npm run clean && npm run compile",
+    "compile": "tsc -p ./tsconfig.json",
+    "clean": "rm -rf ./dist",
+    "debug": "npm run build && node --inspect-brk dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mxw-libs-utils": "^1.0.7",
+    "mxw-sdk-js": "^1.0.0",
+    "sleep": "^6.1.0"
+  }
+}
